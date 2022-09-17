@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>b2c+ Login</title>
+    <link rel="shortcut icon" href="../images/logodigigo50PX.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+  </head>
+  <body>
+    <div class="contai" style="width: 70pc">
+      <!-- <button style="float: left; border: 0">
+        <img src="./images/logodigigo50PX.png" alt="" />
+      </button> -->
+
+      <div class="row" style="margin-top: 10pc">
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first" style="margin-top: 10px">
+              <img
+                src="../images/logodigigo50PX.png"
+                id="icon"
+                alt="User Icon"
+              />
+            </div>
+
+            <!-- Login Form -->
+            <form>
+              <input
+                type="text"
+                class="fadeIn second"
+                name="login"
+                placeholder="login"
+                id="ml"
+                onfocus="this.placeholder=''"
+              />
+              <input
+                type="text"
+                class="fadeIn third"
+                name="login"
+                placeholder="tel"
+                onfocus="this.placeholder=''"
+                id="ps"
+              />
+              <input
+                type="button"
+                class="fadeIn fourth"
+                value="Log In"
+                onclick="fi()"
+              />
+            </form>
+
+            <!-- Remind Passowrd -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p style="margin-top: 20%; font-size: 2pc">© 2022 Vneuron</p>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

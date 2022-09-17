@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiGO By Vneuron</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <!-- ==== HEADER ==== -->
+      <header class="container header">
+        <!-- ==== NAVBAR ==== -->
+        <nav class="nav">
+          <div>
+            <a href="#wrapper" style="font-size: 1.5pc; color: #008ea1"onclick="window.open('../index.html','_self')"
+              ><i class="fa fa-arrow-left" aria-hidden="true" ></i> retour
+            </a>
+          </div>
+
+          <div class="nav_menu" id="nav_menu">
+            <button class="close_btn" id="close_btn">
+              <i class="ri-close-fill"></i>
+            </button>
+
+            <ul class="nav_menu_list">
+              <li class="nav_menu_item">
+                <a href="#" class="nav_menu_link"></a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="toggle_btn" id="toggle_btn">
+            <i class="ri-menu-line"></i>
+          </button>
+        </nav>
+      </header>
+
+      <section class="about section" id="about" style="margin-left: 4pc">
+        <div class="container">
+          <div class="section-body grid-2">
+            <div class="column-1">
+              <h3 class="title-sm">Enterprise</h3>
+              <p class="text">raison sociale</p>
+
+              <input
+              id="raison"
+                type="text"
+                class="title"
+                style="font-size: 1.5pc; height: 3pc"
+              />
+
+              <p class="text">email</p>
+              <input
+              id="mail"
+                type="text"
+                class="title"
+                style="font-size: 1.5pc; height: 3pc"
+              />
+              <p class="text">tel</p>
+              <input
+              id="tel"
+                type="text"
+                class="title"
+                style="font-size: 1.5pc; height: 3pc"
+              />
+              <p class="text">totale certificats</p>
+              <input
+              id="tcertif"
+                type="text"
+                class="title"
+                style="font-size: 1.5pc; height: 3pc"
+              />
+              <br />
+              <p class="text" style="font-size: 2pc">
+                API
+                <input
+                  type="checkbox"
+                  name="API"
+                  id="API"
+                  class="btn small"
+                  style="height: 2pc"
+                  onchange="handleChange(this);"
+                />
+                <p class="text" style="font-size: 2pc; display: none;" id="apii" ></p>
+              </p>
+              <br />
+              <div id="p_scents">
+                <p>
+                  <label for="p_scnts">
+                    <input
+                      type="text"
+                      id="p_scnt11"
+                      size="20"
+                      name="p_scnt"
+                      value=""
+                      class="title"
+                      style="font-size: 1.5pc; height: 3pc"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="text"
+                      id="p_scnt22"
+                      size="20"
+                      name="p_scnt"
+                      value=""
+                      class="title"
+                      style="font-size: 1.5pc; height: 3pc"
+                      placeholder="Tel"
+                    />
+                    <input
+                      type="text"
+                      id="p_scnt33"
+                      size="20"
+                      name="p_scnt"
+                      value=""
+                      class="title"
+                      style="font-size: 1.5pc; height: 3pc; display: none;"
+                      placeholder="Sla"
+                    />
+                  </label>
+                </p>
+              </div>
+              <a
+                href=""
+                style="color: #008ea1; margin-left: 50%"
+                class="text"
+                id="addScnt"
+                ><i class="fa fa-plus">Plus</i></a
+              >
+              <p class="text"></p>
+              <button class="btn small" style="width: 60%" onclick="f()">
+                enregistre
+              </button>
+              <!-- <p class="text"></p>
+              <button class="btn small" style="width: 60%">Telecharger</button> -->
+            </div>
+
+            <div class="column-2 image">
+              <img src="./img/shapes/points4.png" class="points" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="footer"
+        style="height: 100%; display: none; margin-top: 0%"
+        id="footer"
+      >
+        <div class="container">
+          <div class="grid-4">
+            <div class="grid-4-col footer-links">
+              <h3 class="title-sm">Vneuron</h3>
+              <ul>
+                <li>
+                  <a href="https://vneuron.com">Vneuron.com</a>
+                </li>
+              </ul>
+              <img
+                src="./img/ref/111.png"
+                alt=""
+                style="width: 110px; margin-top: 5px"
+              />
+            </div>
+            <div class="grid-4-col footer-links">
+              <h3 class="title-sm">Links</h3>
+              <ul>
+                <li>
+                  <a href="#wrapper">Comment obtenir mon DigiGO ? </a>
+                </li>
+                <li>
+                  <a href="#services">DigiGO</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="grid-4-col footer-links">
+              <h3 class="title-sm">DigiGO</h3>
+              <ul>
+                <li>
+                  <a href="#services">Personnel</a>
+                </li>
+                <li>
+                  <a href="#services">Profisionnel</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="grid-4-col footer-newstletter">
+              <h3 class="title-sm">Subscribe</h3>
+              <p class="text">Abonnez vous pour suivre notre actualité.</p>
+              <div class="footer-input-wrap">
+                <input type="email" class="footer-input" placeholder="Email" />
+                <a href="#" class="input-arrow">
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-footer">
+            <div class="copyright">
+              <p class="text">
+                Copyright&copy;2022 All rights reserved | Made by
+                <span>Ahmedou Mohamed EL Hacen</span>
+              </p>
+            </div>
+
+            <div class="followme-wrap">
+              <div class="followme">
+                <h3>Follow me</h3>
+                <span class="footer-line"></span>
+                <div class="social-media">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="back-btn-wrap">
+                <a href="#" class="back-btn">
+                  <i class="fas fa-chevron-up"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="../page15/index.html" style="color: #784cfb; margin-left: 10pc"
+          >.</a
+        >
+      </footer>
+    </main>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script>
+      c = 0
+      $(function () {
+        var scntDiv = $('#p_scents')
+        var i = $('#p_scents p').size() + 1
+        console.log(i)
+
+        $('#addScnt').live('click', function () {
+          $(
+            '<p><label for="p_scnts"><input type="text" class="title" style="font-size: 1.5pc; height: 3pc" id="' +
+              c +
+              '" size="20" name="p_scnt_' +
+              i +
+              '" value="" placeholder="Email" /></label> <a href="#" style="color: #008ea1" id="remScnt">Remove</a></p>' +
+              '<p><label for="p_scnts"><input type="text" class="title" style="font-size: 1.5pc; height: 3pc" id="' +
+              (c + 1) +
+              '" size="20" name="p_scnt_' +
+              i +
+              '" value="" placeholder="Tel" /></label> <a href="#" style="color: #008ea1" id="remScnt">Remove</a></p>' +
+              '<p><label for="p_scnts"><input type="text" class="title" style="display: none;font-size: 1.5pc; height: 3pc" id="' +
+              (c + 2) +
+              '" size="20" name="p_scnt_' +
+              i +
+              '" value="" placeholder="sla" /></label> <a href="#" style="display: none; color: #008ea1" id="remScnt">Remove</a></p>'
+          ).appendTo(scntDiv)
+          console.log('i=' + i)
+          console.log('c=' + c)
+
+          i++
+          c = c + 3
+          1
+          return false
+        })
+
+        $('#remScnt').live('click', function () {
+          if (i > 0) {
+            $(this).parents('p').remove()
+            i--
+          }
+          return false
+        })
+      })
+      function f() {
+        var dati = new FormData()
+          dati.append('enter', document.getElementById('raison').value)
+          dati.append('mail', document.getElementById('mail').value)
+          dati.append('tel', document.getElementById('tel').value)
+          dati.append('nbcrtf',parseInt(document.getElementById('tcertif').value))
+          fetch('http://localhost:8080/ajouterenterprise', {
+            method: 'POST',
+            body: dati,
+          }).then((response) => response.text())
+        var dd=new FormData()
+        dd.append('enter', document.getElementById('raison').value)
+          dd.append('mail', document.getElementById('p_scnt11').value)
+          dd.append('tel', document.getElementById('p_scnt22').value)
+          dd.append('sla', document.getElementById('p_scnt33').value)
+          fetch('http://localhost:8080/ajouter', {
+            method: 'POST',
+            body: dd,
+          }).then((response) => response.text())
+        for (i = 0; i < c; i++) {
+          var data = new FormData()
+          data.append('enter', document.getElementById('raison').value)
+          data.append('mail', document.getElementById(i).value)
+          data.append('tel', document.getElementById(i + 1).value)
+          data.append('sla', document.getElementById(i + 2).value)
+          fetch('http://localhost:8080/ajouter', {
+            method: 'POST',
+            body: data,
+          }).then((response) => response.text())
+          console.log(document.getElementById('p_scents').value)
+          i = i + 2
+        }
+      document.location.reload()}
+      
+    </script>
+    <!-- ==== ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ==== GSAP CDN ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script src="./script.js" defer></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  </body>
+</html>
